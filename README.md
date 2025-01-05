@@ -13,3 +13,10 @@
 - Tuple: Array-like structure where each element represents some property of a record.
 - Arrays organize a collection of records whereas a tuple usually contains multiple different properties to describe one single thing. Also, inside a tuple we usually mix and match many different types.
 - Tuples are rarely used.
+- Interface + Classes = How we get really strong code reuse in TS
+- Interfaces: They create new types (just like `string`, `number`, ...), describing the property names and value types of an object.
+- The general strategy for reusable code in TS is to 
+    - Create functions that accept arguments that are typed with interfaces
+    - Objects/classes can decide to 'implement' a given interface to work with a function
+- In fact, the interfaces are used as gatekeepers for the functions. If any object need to use a specific function, it first needs to satisfy the interface. 
+- 
