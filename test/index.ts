@@ -1,4 +1,14 @@
+import axios from "axios";
 
-const func: (n: number) => void = (i: number) => {
-  console.log(i)
+interface user {
+  id: number
+  email: string;
+  completed: boolean
 }
+const url = 'https://jsonplaceholder.typicode.com/todos/1'
+
+axios.get(url).then(res => {
+  const todo = res.data as user;
+  const ide = todo.id;
+  console.log(todo)
+})
