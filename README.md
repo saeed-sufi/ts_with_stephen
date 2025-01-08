@@ -34,3 +34,9 @@
   ![Alt text](./static/interfaces-classes.png)
 
 - The 3 main concepts we've learned about TS so far: Inside `index.ts` we want to restrict the API surface area. We used interfaces to setup a dependency between the type and various classes. We can help TS put errors in the correct location by using the `implements` clause on classes.
+- When using union type operator, we're not only restricting the properties that the value can have but also we are restricting the operations that can be done on one side of the union. For example, in `value: string | number[]` we know that an array of numbers supports indexing but because of the union type, `value` cannot support writing to indexes as it's not supported on the `string` type. 
+- When narrowing type of a value use the `typeof` operator and `instanceof` for the following values. Other usages of `typeof` and `instanceof` would not work as type guards in TS. 
+
+  ![Alt text](./static/type-guard.png)
+
+- After `instanceof` we use the constructor function of whatever type we're checking against. For example, in `this.collection instanceof Array`, `Array` is the constructor function. 
