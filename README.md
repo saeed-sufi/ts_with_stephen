@@ -40,3 +40,15 @@
   ![Alt text](./static/type-guard.png)
 
 - After `instanceof` we use the constructor function of whatever type we're checking against. For example, in `this.collection instanceof Array`, `Array` is the constructor function. 
+- Interfaces are useful but not just for specifying a type but because they are used to define a **contract** between classes.
+- It's important to note that interfaces do nothing to guarantee that the implementation of the methods are correct. As longs as the methods exist and have the correct type, interfaces are happy. 
+  ![Alt text](./static/type-guard.png)
+
+- Features of `abstract` classes:
+  ![Alt text](./static/abs-class.png)
+
+- Usage of abstract classes vs interfaces: whenever the classes that are going to have a contract with each other are not really related to each other, for example user class and map class, then interfaces are used to set the contract. However, if the objects are closely related to each other, for example sorter and collection classes, then an abstract class is a better alternative:
+
+  ![Alt text](./static/abs-vs-interface.png)
+
+
