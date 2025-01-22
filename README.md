@@ -51,4 +51,6 @@
 
   ![Alt text](./static/abs-vs-interface.png)
 
+- The only purpose of using **enums** is just to signal other engineers that this is a collection of very closely related values. It can also be used as a `Type`. 
+- In order to figure out if it's a good idea to use enums ask yourself if you already know all the possible values beforehand (you don't need for example to send a network request to find out about values) and the values are actually a set of fixed values. Also, note that enums are usually used on an small set values (about maximum ~15 values). 
 
